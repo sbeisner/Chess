@@ -1,4 +1,4 @@
-package Chess;
+package chess.board;
 
 /**
  * Created by steve on 12/26/16.
@@ -36,9 +36,14 @@ public class Board
 
     }
 
-    public Board()
-    {
+    public Board() {
 
+        BoardGUI bg = new BoardGUI();
+    }
+
+    public static void main(String[] args)
+    {
+        BoardGUI bg = new BoardGUI();
     }
 
 }
