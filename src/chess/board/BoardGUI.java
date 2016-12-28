@@ -41,8 +41,10 @@ public class BoardGUI implements ActionListener{
             }
             for(int j = 0; j < 8; j++)
             {
-                JButton b = new JButton();
+                BoardSpaceButton b = new BoardSpaceButton(j,i);
+                b.addActionListener(this);
                 mainPanel.add(b);
+
                 if(alternate)
                 {
                     b.setBackground(Color.black);
@@ -64,7 +66,8 @@ public class BoardGUI implements ActionListener{
     }
 
     @Override
-    public void actionPerformed(ActionEvent e) {
-
+    public void actionPerformed(ActionEvent e)
+    {
+        System.out.println(e.getActionCommand());
     }
 }
